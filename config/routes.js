@@ -57,6 +57,12 @@ module.exports.routes = {
     validation: "changeStatus",
   },
 
+  'get /admin/user/search': {
+    controller: 'admin',
+    action: 'search-user',
+    validation: 'searchUser',
+  },
+
   /***************************************************************************
    *                                                                          *
    * More custom routes here...                                               *

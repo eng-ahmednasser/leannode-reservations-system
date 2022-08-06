@@ -13,5 +13,6 @@ module.exports.policies = {
 
   admin: {
     login: ["setLocale", "inputValidation"],
+    'search-user': ['setLocale', 'isAuthenticated', 'inputValidation', 'isAdmin'],
   }
 };
