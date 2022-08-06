@@ -66,7 +66,7 @@ module.exports = {
     attr.password = await bcrypt.hash(inputs.password, 10);
 
     try {
-      let docRef = await db.collection("users").add(attr);
+      await db.collection("users").add(attr);
 
       //generate token
       const token = jwt.sign(
@@ -77,6 +77,7 @@ module.exports = {
 
       //insert the user data to algolia index
       const { objectID } = await algoliaAddIndex(attr);
+      sails.log(`User indexed in algolia : ${objectID}`);
 
       //clear unused attributes
       attr = _.omit(attr, ["password"]);
