@@ -20,6 +20,17 @@ module.exports.routes = {
 
   // "/": { view: "pages/homepage" },
 
+  "get /api/appointments/nearest": {
+    controller: "appointment",
+    action: "nearest"
+  },
+
+  "post /api/appointments/add": {
+    controller: "appointment",
+    action: "add",
+    validation: "addAppointment",
+  },
+
   "post /api/users/register": {
     controller: "normal-auth",
     action: "register",

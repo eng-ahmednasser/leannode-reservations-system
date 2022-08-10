@@ -14,5 +14,10 @@ module.exports.policies = {
   admin: {
     login: ["setLocale", "inputValidation"],
     'search-user': ['setLocale', 'isAuthenticated', 'inputValidation', 'isAdmin'],
+  },
+
+  appointment: {
+    add: ['setLocale', 'isAuthenticated', 'inputValidation', 'isNormalUser'],
+    nearest: ['setLocale', 'isAuthenticated', 'isNormalUser'],
   }
 };

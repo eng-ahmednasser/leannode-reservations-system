@@ -14,6 +14,7 @@
     "grunt": "1.0.4",
     "joi": "^17.4.0",
     "jsonwebtoken": "^8.1.0",
+    "moment": "^2.29.4",
     "nodemon": "^2.0.7",
     "sails": "^1.4.2",
     "sails-hook-grunt": "^4.0.0",
